@@ -1,13 +1,14 @@
 import React from 'react';
 import { Chart } from 'taucharts';
 import equal from 'deep-equal';
+import PropTypes from 'prop-types';
 
 const TauChartReact = React.createClass({
 	displayName: 'TauChart',
 
 	propTypes: {
-		options: React.PropTypes.object.isRequired,
-		data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+		options: PropTypes.object.isRequired,
+		data: PropTypes.arrayOf(PropTypes.object).isRequired
 	},
 
 	componentWillUnmount() {
@@ -52,7 +53,7 @@ const TauChartReact = React.createClass({
 	},
 
 	render() {
-		return (<div style={{height: '100%'}} className={this.props.className} ref="placeholder"></div>)
+		return (<div style={{ height: '100%' }} className={this.props.className} ref="placeholder"></div>)
 	}
 
 });

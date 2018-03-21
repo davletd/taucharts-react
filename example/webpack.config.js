@@ -11,11 +11,17 @@ module.exports = {
 		filename: 'build.js'
 	},
 
-		resolve: {
+	resolve: {
 		alias: {
 			'taucharts-react': '../src/index.js'
 		}
 	},
+
+	externals: [
+		{
+			xmlhttprequest: "{XMLHttpRequest:XMLHttpRequest}"
+		}
+	],
 
 	module: {
 		loaders: [
